@@ -1,7 +1,7 @@
 p {
     font-size: 14px;
 }
-
+/* This applies from 800px and larger */
 @media all and (min-width: 800px) {
     p{
         font-size: 24px;

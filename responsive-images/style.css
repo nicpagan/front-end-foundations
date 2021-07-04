@@ -20,6 +20,16 @@ h3 {
   border-bottom: 1px solid lightgray;
 }
 
+/* targets all imgs within .group container to display @ 100% */
+/* img {
+  width: 100%;
+} */
+
+/* targets only the imgs within the main container to be 100% width */
+main img {
+  width: 100%;
+}
+
 /* Groups & Items */
 
 .group {
