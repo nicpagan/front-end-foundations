@@ -1,3 +1,101 @@
 body {
   margin: 0;
 }
+
+header {
+  /* Sets background color to black */
+  background-color: #000;
+  /* Adds 40 px of space under the header so that
+  the main content isn't so close to the navigation */
+  margin-bottom: 40px;
+}
+
+/* The header h1 selector targets the title of your document. */
+header h1 {
+  /* sets text color to white */
+  color: #fff;
+  /* centers text */
+  text-align: center;
+  /* removes default margin and spacing around the h1 element */
+  margin: 0;
+  /* pushes the text down 20px from the top of the page */
+  padding-top: 20px;
+}
+
+/* targets the container for the navigation within the header.
+  Allows for other nav containers to be styled differently like in the footer or elsewhere
+  */
+header nav {
+  /* changes display property from default to 'flex' */
+  display: flex;
+  /* centers an element defined as 'display: flex'. */
+  justify-content: center;
+}
+
+/* targets unordered list within the headers nav container */
+header nav ul {
+  /* changes the display property from its default to 'flex' */
+  display: flex;
+  /* note: the default value for 'display: flex' is to display in a single row.
+  Since this is what we want to happen, we do not need to define it's 'flex-direction' in this case. 
+  */
+
+  /* removes default padding to the left of the unordered list */
+  padding-left: 0;
+
+  /* removes bullet points from the list items within the unordered list */
+  list-style: none;
+
+}
+
+/* targets the anchor tag (link) of the list items within the unordered list that is within the header's nav container. */
+header nav ul li a {
+  /* The link color is white. */
+  color: #fff;
+  /* Removes the underline from the link. */
+  text-decoration: none;
+  /* Applies 20 pixels of margin to the right of each link 
+     creating a visual gap between the navigation links. */
+  margin: 0 20px 0 0;
+}
+
+/* targets the last list items contained anchor(link) */
+header nav ul li:last-child a {
+ /* Removes the margin to the right of the last anchor tag 
+     so that the nav appears centered. */
+     margin-right: 0;
+}
+
+
+/* When a web browser is larger than 600px, apply these rules */
+@media all and (min-width: 600px) {
+  header {
+    /* changes default setting from 'block' to 'flex; */
+    display: flex;
+    /* pushes the items(title and nav) to the far sides of the browser with space between them*/
+    justify-content: space-between;
+    /* adds 0px padding top and bottom, and 30px padding left and right */
+    padding: 0 30px
+  }
+
+  header h1 {
+    /* sets 14px margin above and below h1 and sets 0px of margin the left and right  */
+    margin: 14px 0;
+    /* removes or sets 0px of padding above h1 */
+    padding-top: 0;
+  }
+
+  header nav {
+    /* pushed the nav container down by 8px to make it present a little better visually within the space*/
+    margin-top: 8px
+  }
+  
+  /* Users cannot hover on mobile devices, so that is why you
+     implement this behavior only for larger screens. */
+  header nav ul li a:hover {
+    /* Targets the change when a user holds the pointer over the anchor tag 
+       (link) within the list items within the unordered list that 
+       is within the navigation that is within the header. */
+    color: #bdbdbd;
+  }
+}
